@@ -1,6 +1,6 @@
 <p>{{title}}</p>
-<input name="result" value="{{result}}" readonly/>
-<input type="text" name="name" (change)="onInputChange($event)" />
+<input name="result" value="{{finalResult}}" readonly/>
+<input type="text" value="{{result}}" name="name" (change)="onInputChange($event)" />
 <button (click)="add(1)">1</button>
 <button (click)="add(2)">2</button>
 <button (click)="add(3)">3</button>
@@ -11,3 +11,9 @@
 <button (click)="add(8)">8</button>
 <button (click)="add(9)">9</button>
 <button (click)="add(0)">0</button>
+<button (click)="add('+')">+</button>
+<button (click)="add('-')">-</button>
+<button (click)="add('/')">/</button>
+<button (click)="add('=')">=</button>
+<button (click)="clear()">Clear</button>
+<input type="text" value="{{title}}">

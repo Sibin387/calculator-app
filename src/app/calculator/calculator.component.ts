@@ -6,18 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculator.component.css']
 })
 export class CalculatorComponent implements OnInit {
-  title="Calculator";
-  title1="Calculator11";
+  title="Calculator App";
   result="";
+  finalResult=""
   constructor() { }
 
   ngOnInit() {
 
   }
   add(data){
-    this.result += data;
+    if(data=="="){
+      this.finalResult = eval(this.result);
+    }else{
+      this.result += data;
+    }
   }
-
+  clear(){
+    this.result="";
+    this.finalResult="";
+  }
   onInputChange($event){
     this.title = $event.target.value;
     //console.log($event);
